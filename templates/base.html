@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+
+    <h1>To Do List</h1>
+    <!-- action specifies the page to send data && method (format)how to send-->
+    <form action="/add" method="post">
+        <div>
+            <label>Todo Task</label>
+            <input type="text" name="title" placeholder="Enter Todo...">
+            <br>
+            <button type="submit">Add</button>
+            
+        </div>
+    </form>
+    
+<!---- jinja template -->
+    {% for i in range(length) %}
+
+    <p>{{i+1}} | {{ todo_list[i].title }}</p>
+
+    {% if todo_list[i].complete == False %}
+    <span>Incomplete</span>
+    <a href="/update/{{ todo_list[i].id }}">Mark</a>
+    
+    {% else %}
+    <span>Completed</span>
+    <a href="/update/{{ todo_list[i].id }}">Unmark</a>
+    
+    {% endif %}
+    <a href="/delete/{{ todo_list[i].id }}">Delete</a>
+    {% endfor %}
+
+</body>
+
+</html>
