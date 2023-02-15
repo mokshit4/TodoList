@@ -1,5 +1,5 @@
 # TodoList
- TodoList using flask, flask-sqlalchemy and sqlite
+ TodoList using Flask, Flask-SQLalchemy and SQLite
 
 # Flask-Todolist
 Flask-Todolist is a simple To Do List web application with the most basic features of most web apps, i.e. entries, API and (somewhat) interactive UI. 
@@ -11,6 +11,7 @@ If you prefer to run it directly on your local machine, use virtualenv , anyway 
    * $ cd myproject
    * $ venv\Scripts\Activate 
    * $ python app.py
+   
 The app opens in your local server.
 
 ## Extensions
